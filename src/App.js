@@ -1,7 +1,6 @@
 import React from 'react';
 import { Header } from "./components/Header";
 import { Contain } from "./components/Contain";
-
 import { GlobalProvider } from "./context/GlobalState";
 
 import './App.css';
@@ -11,7 +10,7 @@ function App() {
     <GlobalProvider>
       <Header />
       <div className="container">
-       <Contain />
+        <Contain />
       </div>
     </GlobalProvider>
   );

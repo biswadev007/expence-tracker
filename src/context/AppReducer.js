@@ -6,6 +6,7 @@ export default (state, action) => {
                 transactions: action.payload,
                 loader: false
             }
+           
         case 'DELETE_TRANSACTION':
             return {
                 ...state,
@@ -23,5 +24,7 @@ export default (state, action) => {
             }
         default:
             return state;
+           
     }
+    
 }
