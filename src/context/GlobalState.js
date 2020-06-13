@@ -3,7 +3,9 @@ import axios from "axios";
 
 import AppReducer from "./AppReducer";
 
-const apiUrl = "https://trackerexpences.herokuapp.com/";
+// const apiUrl = "https://trackerexpences.herokuapp.com/";
+const apiUrl = "http://localhost:5000/";
+
 //Initial State
 const initialState = {
     transactions: [],
@@ -30,6 +32,7 @@ export const GlobalProvider = ({ children }) => {
                 payload: res.data.data
             });
         } catch (err) {
+            console.log("....", err)
             dispatch({
                 type: 'TRANSACTION_ERROR',
                 payload: err.response.data.error
