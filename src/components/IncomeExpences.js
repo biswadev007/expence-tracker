@@ -16,7 +16,7 @@ export const IncomeExpences = () => {
             </div>
             <div>
                 <h4>Expense</h4>
-                <p className="money minus">${Math.abs(numberWithCommas(expence))}</p>
+                <p className="money minus">${numberWithCommas(expence)}</p>
             </div>
         </div>
     )

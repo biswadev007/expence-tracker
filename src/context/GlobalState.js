@@ -3,8 +3,8 @@ import axios from "axios";
 
 import AppReducer from "./AppReducer";
 
-// const apiUrl = "https://trackerexpences.herokuapp.com/";
-const apiUrl = "http://localhost:5000/";
+const apiUrl = "https://trackerexpences.herokuapp.com/";
+// const apiUrl = "http://localhost:5000/";
 
 //Initial State
 const initialState = {
@@ -35,7 +35,7 @@ export const GlobalProvider = ({ children }) => {
             console.log("....", err)
             dispatch({
                 type: 'TRANSACTION_ERROR',
-                payload: err.response.data.error
+                payload: err
             });
         }
     }
